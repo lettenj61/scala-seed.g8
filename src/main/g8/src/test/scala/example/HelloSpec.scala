@@ -2,8 +2,10 @@ package example
 
 import org.scalatest._
 
-class HelloSpec extends FlatSpec with Matchers {
-  "The Hello object" should "say hello" in {
-    Hello.greeting shouldEqual "hello"
+class HelloSpec extends FunSpec {
+  describe("The Hello object") {
+    it("should say hello") {
+      assert(Hello.greeting == "hello")
+    }
   }
 }
